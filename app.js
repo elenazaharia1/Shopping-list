@@ -33,8 +33,11 @@ const crud = function () {
 
   inputTask.value = "";
 
-  checkButton.addEventListener("click", function () {
-    checkButton.parentElement.style.textDecoration = "line-through";
+  checkButton.addEventListener("click", function (e) {
+    checkButton.parentElement.style.textDecoration =
+      checkButton.parentElement.style.textDecoration === "line-through"
+        ? ""
+        : "line-through";
   });
 
   deleteButton.addEventListener("click", function (e) {
